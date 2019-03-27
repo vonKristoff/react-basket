@@ -1,0 +1,39 @@
+.product-modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.75);
+	opacity: 0;
+	transition: opacity .3s;
+	transform: translateX(-100%);
+	&.is-active {
+		opacity: 1;
+		transform: translateX(0%);
+		.product-preview-card {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+}
+.product-preview-card {
+	flex-direction: column;
+	transition: all .3s;
+	background-color: #efefef;
+	transform: scale(.25);
+	opacity: 0;
+	border-radius: .125em;
+	box-shadow: 0 0 10em rgba(0,0,0,.75);
+	.box {
+		@include padding(1em, 3em);
+	}
+	.box:first-child {
+		@include padding(.5em, 0em);
+		width: 100%;
+		text-align: right;
+	}
+	.el-emoji {
+		font-size: 6em;
+	}
+}

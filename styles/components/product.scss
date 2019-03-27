@@ -1,0 +1,16 @@
+.product-component {
+	width: inherit;
+	border-bottom: 1px dashed rgba(0,0,0,.125);
+	.box {
+		flex: 1;
+		&:last-child, &:nth-last-child(-n+2) {
+			text-align: right;
+		}
+		.el-price {
+			color: #fa8072;
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+}

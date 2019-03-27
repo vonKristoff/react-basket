@@ -1,0 +1,31 @@
+.basket-component {
+	height: 100vh;
+	overflow: hidden;
+}
+.basket-card-container {
+	background-color: #fff;
+	min-height: 35vh;
+	width: 100%;
+	max-width: 768px;
+	flex-direction: column;
+	justify-content: space-around;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: .125em;
+}
+.basket-head, .basket-body, .basket-foot {
+	@include padding(2em,2em);
+}
+.basket-body {
+	border-top: 1px solid rgba(0,0,0,.125);
+	flex-direction: column;
+	width: 100%;
+}
+.basket-foot {
+	border-top: 1px solid rgba(0,0,0,.125);
+	width: 100%;
+	background-color: #efefef;
+	.box:first-child {
+		flex: 1 1 auto;
+		font-size: 2em;		
+	}
+}

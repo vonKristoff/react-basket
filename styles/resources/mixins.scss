@@ -1,0 +1,3 @@
+@mixin padding($tops: .5em, $sides: 1em) {
+	padding: $tops $sides;
+}

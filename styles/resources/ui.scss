@@ -1,0 +1,38 @@
+[class^="is-button"] {
+	cursor: pointer;
+	transition: all .3s;
+	font-family: FontAwesome, sans-serif;
+	@include padding();
+}
+
+.is-button {
+	&--submit {
+		color: #efefef;
+		font-size: 1.25em;
+		background-color: #6495ed;
+		display: inline-flex;
+		align-items: center;
+		border-radius: .125em;
+		[class*="fa--"] {
+			@include padding(.5em, .5em);
+			font-size: .75em;
+			margin-left: .5em;
+			transition: transform .3s;
+		}
+		&:hover {
+			[class*="fa--"] {
+				transform: translateX(.25em);
+			}
+		}
+	}
+	&--simple {
+		color: #666;
+		transition: color .3s;
+		&:hover {
+			color: rgba(0,0,0,.25);
+		}
+	}
+	&--icon {
+		color: rgba(0,0,0,.75);
+	}
+}
