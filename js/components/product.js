@@ -10,16 +10,18 @@ const Product = ({ model }) => (
 	<BasketConsumer>
 	{({ action, inspectItem, currency }) => (
 		<div className="product-component layout--flex">
-			<div className="box" onClick={ () => inspectItem(model) }>{ Icon("eye") }</div>
-			<div className="box"><span>{ model.label }</span></div>
-			<div className="box layout--flex">
+			<div className="box" onClick={ () => inspectItem(model) }>
+				{ Icon("eye") }
+				<span>{ model.label }</span>
+			</div>
+			<div className="box block-quantity layout--flex">
 				<div className="el-less" onClick={ () => action("remove", model) }>{ Icon("minus") }</div>
 				<div className="el-quantity"><span>{ model.quantity }</span></div>
 				<div className="el-more" onClick={ () => action("add", model) }>{ Icon("plus") }</div>
 			</div>
 			<div className="box"><span className="el-price">{ getPrice(model.price, currency) }</span></div>
 			<div className="box">
-				<div className="is-button--icon" onClick={ () => action("delete", model) }>{ Icon("remove") }</div>
+				<div onClick={ () => action("delete", model) }>{ Icon("remove") }</div>
 			</div>
 		</div>
 	)}

@@ -15,4 +15,9 @@ export const ProductData = [{
 	label: "Jack Daniels",
 	img: "/assets/images/daniels.jpg",
 	emoji: "🍸"
+},{
+	uid: "weak-key-oat",
+	label: "Oat Milk",
+	img: "/assets/images/oats.jpg",
+	emoji: "🥛"
 }]

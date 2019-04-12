@@ -1,0 +1,16 @@
+$mq-mobile: 640px;
+$mq-tablet: 768px;
+
+@mixin tablet {
+    @media (max-width: #{$mq-tablet}) {
+        font-size: $font-size_base--tablet;
+        @content;
+    }    
+}
+
+@mixin mobile {
+    @media (max-width: #{$mq-mobile}) {
+        font-size: $font-size_base--mobile;
+        @content;
+    }
+}

@@ -1,0 +1,23 @@
+@import 'colours';
+$border-std: 1px solid $color-dark;
+$border-product: 1px dashed $color-hairline;
+$border-none: none;
+
+$border-radius-std: .125em;
+
+$font-size_base: 18px;
+$font-size_base--tablet: 15px;
+$font-size_base--mobile: 15px;
+
+$font-size-xl: 2em;
+$font-size-l: 1.5em;
+$font-size-m: 1.5em;
+$font-size-s: .75em;
+
+$width-tablet: 768px;
+
+$spacing-small: .5em;
+$spacing-std: 1em;
+$spacing-large: 2em;
+$spacing-wide: 3em;
+$spacing-xl: 4em;

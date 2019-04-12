@@ -7,9 +7,9 @@ const Basket = (props) => (
 	<BasketConsumer>
 	{({ basketItems, action, currency, total }) => (	
 		<div className="basket-component layout--flex">
-			<div className="basket-card-container layout--flex">
+			<div className="basket-card-container layout--flex-column">
 				<div className="basket-head"><span>Shopping Basket</span></div>
-				<div className="basket-body layout--flex">{ productsReducer(basketItems) }</div>
+				<div className="basket-body layout--flex-column">{ productsReducer(basketItems) }</div>
 				<div className="basket-foot layout--flex">
 					<div className="box">
 						<span className="el-total">{ getTotalByCurrency(currency, total) }</span>

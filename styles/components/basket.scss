@@ -3,29 +3,43 @@
 	overflow: hidden;
 }
 .basket-card-container {
-	background-color: #fff;
+	background-color: $color-white;
 	min-height: 35vh;
 	width: 100%;
-	max-width: 768px;
-	flex-direction: column;
+	max-width: $width-tablet;
 	justify-content: space-around;
-	border: 1px solid rgba(0,0,0,.15);
-	border-radius: .125em;
+	@include border(1, $border-std);
+	border-radius: $border-radius-std;
+}
+.basket-card-container {
+	@include mobile() {
+		height: 100vh;
+		.basket-body {
+			height: 75vh;
+			justify-content: flex-start;	
+			overflow-y: scroll;
+		}
+		.basket-foot {
+			height: 20vh;
+		}
+	}
 }
 .basket-head, .basket-body, .basket-foot {
 	@include padding(2em,2em);
 }
 .basket-body {
-	border-top: 1px solid rgba(0,0,0,.125);
-	flex-direction: column;
+	@include border(top, $border-std);
 	width: 100%;
 }
 .basket-foot {
-	border-top: 1px solid rgba(0,0,0,.125);
+	@include border(top, $border-std);
 	width: 100%;
-	background-color: #efefef;
+	background-color: $color-chalk;
 	.box:first-child {
 		flex: 1 1 auto;
-		font-size: 2em;		
+		font-size: $font-size-xl;
+	}
+	@include mobile() {
+		font-size: $font-size-s;
 	}
 }

@@ -1,7 +1,14 @@
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
 .layout {
 	&--flex {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex(row);
 	}
+    &--flex-column {
+        @include flex(column);
+    }
 }

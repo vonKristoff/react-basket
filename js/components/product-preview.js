@@ -7,7 +7,7 @@ const ProductPreview = () => (
 	<BasketConsumer>
 	{({ inspect, inspectItem }) => (
 		<div className={ isActive(inspect) }>
-			<div className="product-preview-card layout--flex">
+			<div className="product-preview-card layout--flex-column">
 				<div className="box" onClick={ () => inspectItem() }>{ Icon("close") }</div>
 				<div className="box"><span className="el-emoji">{ fromDataCollection(inspect, "emoji") }</span></div>
 				<div className="box"><span>{ asModel(inspect, "label") }</span></div>

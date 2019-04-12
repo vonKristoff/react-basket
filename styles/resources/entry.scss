@@ -1,3 +1,5 @@
+@import 'variables/core';
+@import 'variables/breakpoints';
 * {
 	box-sizing: border-box;
 }
@@ -7,4 +9,7 @@ html, body {
  	padding: 0;
  	background-color: #eee;
  	color: #444;
+    font-size: $font-size-base;
+    @include tablet();
+    @include mobile();
 }

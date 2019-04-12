@@ -4,10 +4,12 @@ import { Drinks, Prices } from '../collections/stock'
 const BasketContext = createContext()
 const BasketConsumer = BasketContext.Consumer
 
+// Items already added to Cart => could come from cache
 const UserQuantityLookup = {
 	"weak-key-mountain": 4,	
 	"weak-key-desperate": 2,	
-	"weak-key-daniel": 4
+	"weak-key-daniel": 4,
+	"weak-key-oat": 1
 }
 const CurrencyLookup = {
 	"euro": "€",

@@ -1,16 +1,28 @@
 .product-component {
 	width: inherit;
-	border-bottom: 1px dashed rgba(0,0,0,.125);
+	@include border(bottom, $border-product);
 	.box {
-		flex: 1;
+		flex: .25;
+		&:first-child {
+			@include flex(row);
+			justify-content: flex-start;
+			min-width: 50%;
+		}
 		&:last-child, &:nth-last-child(-n+2) {
 			text-align: right;
 		}
 		.el-price {
-			color: #fa8072;
+			color: $color-salmon;
 		}
-	}
+		&.block-quantity {
+			padding: $spacing-small;
+			@include mobile() {
+				flex-direction: column-reverse;
+				padding: $spacing-std;				
+			}	
+		}
+	}	
 	&:last-child {
-		border-bottom: none;
+		@include border(bottom, $border-none);
 	}
 }

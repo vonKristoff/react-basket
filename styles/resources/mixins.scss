@@ -1,3 +1,20 @@
-@mixin padding($tops: .5em, $sides: 1em) {
+@import 'variables/core';
+@mixin padding($tops: $spacing-small, $sides: $spacing-std) {
 	padding: $tops $sides;
+}
+
+@mixin border($direction, $line...) {
+    @if $direction == 1 {
+        border: $line;
+    } @else {
+        border-#{$direction}: $line;
+    }
+}
+
+@mixin fullscreen() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }

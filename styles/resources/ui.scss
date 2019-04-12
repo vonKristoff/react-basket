@@ -1,3 +1,4 @@
+@import 'variables/colours';
 [class^="is-button"] {
 	cursor: pointer;
 	transition: all .3s;
@@ -7,16 +8,16 @@
 
 .is-button {
 	&--submit {
-		color: #efefef;
-		font-size: 1.25em;
-		background-color: #6495ed;
+		color: $color-white;
+		font-size: $font-size-m;
+		background-color: $color-cornflower;
 		display: inline-flex;
 		align-items: center;
-		border-radius: .125em;
+		border-radius: $border-radius-std;
 		[class*="fa--"] {
-			@include padding(.5em, .5em);
-			font-size: .75em;
-			margin-left: .5em;
+			@include padding($spacing-small, $spacing-small);
+			font-size: $font-size-s;
+			margin-left: $spacing-small;
 			transition: transform .3s;
 		}
 		&:hover {
@@ -26,13 +27,10 @@
 		}
 	}
 	&--simple {
-		color: #666;
+		color: $color-gray;
 		transition: color .3s;
 		&:hover {
-			color: rgba(0,0,0,.25);
+			color: $color-darker;
 		}
-	}
-	&--icon {
-		color: rgba(0,0,0,.75);
 	}
 }
